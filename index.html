@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AurusTech - Inovação em TI e IA</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            aurusDark: '#13131A', // Fundo principal
+            aurusGray: '#242430',  // Fundo secundário
+            aurusCyan: '#00F5A0',  // Destaque ciano
+            aurusBlue: '#00BBF9',  // Destaque azul
+            lightText: '#E0E0E0',
+          },
+          keyframes: {
+            float: {
+              '0%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-6px)' },
+              '100%': { transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            float: 'float 3s ease-in-out infinite',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      cursor: crosshair;
+    }
+  </style>
+</head>
+
+<body class="bg-aurusDark text-lightText font-sans">
+
+  <!-- Container Principal -->
+  <div class="container mx-auto px-4 py-6">
+
+    <!-- Barra de Navegação / Cabeçalho -->
+    <nav class="flex justify-between items-center py-4">
+      <!-- Logo / Título -->
+      <div class="flex items-center space-x-2">
+        <svg class="w-8 h-8 text-aurusCyan animate-float transition hover:rotate-12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h1m0 8h-1m4.828-2.172A4 4 0 0016 11.172V10a4 4 0 10-8 0v1.172a4 4 0 00-1.828 2.656"></path></svg>
+        <h1 class="text-2xl font-bold text-aurusCyan">AurusTech</h1>
+      </div>
+
+      <ul class="flex space-x-4 items-center">
+        <li>
+          <a href="#empresa" class="hover:text-aurusCyan transition">Empresa</a>
+        </li>
+        <li>
+          <a href="#solucoes" class="hover:text-aurusCyan transition">Soluções</a>
+        </li>
+        <li>
+          <a href="#contato" class="hover:text-aurusCyan transition">Contato</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Seção Hero / Apresentação -->
+    <section class="text-center py-16 bg-gradient-to-br from-aurusDark to-aurusGray rounded-lg mb-8 relative overflow-hidden">
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="w-2 h-2 bg-aurusCyan absolute top-1/4 left-1/3 rounded animate-float"></div>
+        <div class="w-2 h-2 bg-aurusBlue absolute top-2/3 right-1/4 rounded animate-float" style="animation-delay:1s"></div>
+        <div class="w-2 h-2 bg-aurusCyan absolute bottom-1/4 right-1/3 rounded animate-float" style="animation-delay:2s"></div>
+        <div class="w-2 h-2 bg-aurusBlue absolute top-1/2 left-1/4 rounded animate-float" style="animation-delay:3s"></div>
+      </div>
+      <h2 class="text-4xl font-bold text-aurusCyan mb-4 drop-shadow-[0_0_4px_#00F5A0] relative">Inovação em TI e IA</h2>
+      <p class="mb-8 text-lg max-w-xl mx-auto relative">
+        A AurusTech é especialista em soluções de tecnologia, inteligência artificial e sistemas que transformam negócios.
+      </p>
+      <a href="#solucoes" class="bg-aurusCyan text-aurusDark py-3 px-6 rounded shadow hover:shadow-lg transition hover:scale-105 font-semibold inline-block">Conheça nossas soluções</a>
+    </section>
+
+    <!-- Seção Empresa -->
+    <section id="empresa" class="py-12">
+      <h3 class="text-3xl font-bold text-aurusCyan mb-6">Nossa Empresa</h3>
+      <div class="md:flex md:space-x-8 items-start">
+        <div class="md:w-1/2 mb-6 md:mb-0">
+          <p class="leading-relaxed mb-4">
+            Fundada com a missão de levar <span class="text-aurusBlue font-semibold">tecnologia de ponta</span> e <span class="text-aurusCyan font-semibold">inteligência artificial</span> para todas as empresas, a AurusTech se destaca pela inovação contínua e pelo foco em resultados reais para nossos clientes.
+          </p>
+          <p class="leading-relaxed">
+            Nosso time reúne <span class="text-aurusBlue font-semibold">especialistas em T.I</span>, cientistas de dados e desenvolvedores apaixonados por criar soluções eficientes e escaláveis. Acreditamos que a <span class="text-aurusCyan font-semibold">transformação digital</span> é o caminho para acelerar negócios e aproximar pessoas.
+          </p>
+        </div>
+        <div class="md:w-1/2">
+          <img src="https://via.placeholder.com/600x350/00F5A0/ffffff?text=AurusTech+Equipe" alt="Equipe AurusTech" class="rounded shadow"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Soluções -->
+    <section id="solucoes" class="py-12">
+      <h3 class="text-3xl font-bold text-aurusCyan mb-8">Nossas Soluções</h3>
+
+      <!-- Cards de Solução -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- AurusVoice -->
+        <div class="bg-aurusGray p-6 rounded shadow hover:shadow-lg transition hover:scale-105">
+          <h4 class="text-2xl font-bold mb-2 text-aurusCyan">AurusVoice</h4>
+          <p class="leading-relaxed mb-4">
+            Ligue para qualquer pessoa, em qualquer lugar, usando nossa <span class="text-aurusBlue font-semibold">IA de voz realista</span>. Escreva a mensagem, escolha o destinatário, e nós fazemos o resto. Ideal para mensagens anônimas, recados urgentes ou ações de marketing.
+          </p>
+          <a href="#" class="inline-block bg-aurusCyan text-aurusDark py-2 px-4 rounded font-semibold shadow hover:shadow-md">Saiba mais</a>
+        </div>
+
+        <!-- AurusTech (SAC Compacto) -->
+        <div class="bg-aurusGray p-6 rounded shadow hover:shadow-lg transition hover:scale-105">
+          <h4 class="text-2xl font-bold mb-2 text-aurusCyan">AurusTech SAC</h4>
+          <p class="leading-relaxed mb-4">
+            Sistema de atendimento ao cliente <span class="text-aurusBlue font-semibold">prático e compacto</span>, desenvolvido para empresas que buscam otimizar seus processos de SAC. Acompanhe tickets, histórico de interações e resolva problemas em tempo recorde.
+          </p>
+          <a href="#" class="inline-block bg-aurusCyan text-aurusDark py-2 px-4 rounded font-semibold shadow hover:shadow-md">Saiba mais</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="py-12">
+      <h3 class="text-3xl font-bold text-aurusCyan mb-6">Fale Conosco</h3>
+      <p class="mb-6 max-w-xl">
+        Quer saber mais sobre nossos serviços ou deseja solicitar um orçamento? Entre em contato com a gente!
+      </p>
+      <div class="bg-aurusGray p-6 rounded shadow max-w-md">
+        <form>
+          <div class="mb-4">
+            <label class="block mb-1 font-semibold" for="nomeContato">Nome</label>
+            <input type="text" id="nomeContato" class="w-full bg-aurusDark p-2 rounded focus:outline-none focus:ring-2 focus:ring-aurusCyan" placeholder="Seu nome" />
+          </div>
+          <div class="mb-4">
+            <label class="block mb-1 font-semibold" for="emailContato">E-mail</label>
+            <input type="email" id="emailContato" class="w-full bg-aurusDark p-2 rounded focus:outline-none focus:ring-2 focus:ring-aurusCyan" placeholder="seuemail@exemplo.com" />
+          </div>
+          <div class="mb-4">
+            <label class="block mb-1 font-semibold" for="mensagemContato">Mensagem</label>
+            <textarea id="mensagemContato" rows="4" class="w-full bg-aurusDark p-2 rounded focus:outline-none focus:ring-2 focus:ring-aurusCyan" placeholder="Como podemos ajudar?"></textarea>
+          </div>
+          <button type="submit" class="bg-aurusCyan text-aurusDark py-2 px-4 rounded font-semibold shadow hover:shadow-md transition hover:scale-105">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="text-center py-8 border-t border-aurusCyan mt-12">
+      <p>&copy; 2025 AurusTech. Todos os direitos reservados.</p>
+      <p class="mt-2">
+        <a href="#" class="hover:text-aurusCyan transition">Política de Privacidade</a> |
+        <a href="#" class="hover:text-aurusCyan transition">Termos de Uso</a>
+      </p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
